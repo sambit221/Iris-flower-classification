@@ -174,3 +174,6 @@ print("Test set score: {}".format(np.mean(y_pred == y_test)))
 We got an accuracy of 0.9736842105263158
 
 
+
+# Developed by:
+<a href="https://github.com/sambit221">Sambit Kumar Tripathy</a>
