@@ -7,7 +7,7 @@ This program applies basic machine learning (classification) concept using KNN(k
 <img align="left" alt="VS Code" width="26px" src="vscode.png" />
 <img align="left" alt="Python" width="26px" src="python.png" />
 <img align="left" alt="colab" width="26px" height="34px" src="colab.png" />
-<img align="left" alt="numpy"   width="34px" height="44px" src="numpy.png" />
+<img align="left" alt="numpy"   width="34px" height="40px" src="numpy.png" />
 <img align="left" alt="scikit learn"  height="34px" src="Scikit_learn.png" />
 <img align="left" alt="pandas"  height="34px" src="pandas.png" />
 <br>
@@ -36,23 +36,23 @@ Four features were measured from each sample (in centimetres):
 # Breaking the code
 
 
-##Importing libraries:
+==>Importing libraries:
 
-###Code snippet 1
+->Code snippet 1
 ```python
 import numpy as np
 import pandas as pd
 ```
 
-##Exploring the data 
-###Code snippet 2
+==>Exploring the data <br>
+->Code snippet 2
 ```python
 from sklearn.datasets import load_iris
 iris_dataset = load_iris()
 ```
 
 
-###Code snippet 3
+->Code snippet 3
 ```python
 print("Keys of iris dataset: \n{}".format(iris_dataset.keys()))
 
@@ -66,8 +66,8 @@ printing keys of the dataset.The value of the key DESCR is a short description o
 Target names are the targets to which the data is to be classified.<br>
 
 
- 
-###Code snippet 4
+
+->Code snippet 4
 ```python
 print("Feature names: {}".format(iris_dataset['feature_names']))
 
@@ -78,7 +78,7 @@ Type of data is how the data is stored. In this case it is stored as numpy ndarr
 
 
 
-###Code snippet 5
+->Code snippet 5
 ```python
 print("Shape of data: {}".format(iris_dataset['data'].shape))
 
@@ -89,7 +89,7 @@ Features for first five samples(data points) Here we are just slicing the 2d num
 
 
 
-###Code snippet 6
+->Code snippet 6
 ```python
 print("Type of target : {}".format(type(iris_dataset['target'])))
 
@@ -99,7 +99,7 @@ Here we are using train_test_split to split the entire data. X_train contains 75
 
 
 
-###Code snippet 7
+->Code snippet 7
 ```python
 from sklearn.model_selection import train_test_split
 X_train, X_test, y_train, y_test = train_test_split(
@@ -114,7 +114,7 @@ The dataset after dividing into training and testing dataset.
 
 
 
-###Code snippet 8
+->Code snippet 8
 ```python
 from sklearn.neighbors import KNeighborsClassifier
 knn = KNeighborsClassifier(n_neighbors=1)
@@ -124,7 +124,7 @@ knn = KNeighborsClassifier(n_neighbors=1)
 
 
 
-###Code snippet 9
+->Code snippet 9
 ```python
 knn.fit(X_train, y_train)
 ```
@@ -133,9 +133,9 @@ Training the entire model using training data<br>
 
 
 
-##Making Predictions:
+==>Making Predictions: <br>
 
-###Code snippet 10
+->Code snippet 10
 ```python
 X_new = np.array([[5, 2.9, 1, 0.2]])
 print("X_new.shape: {}".format(X_new.shape))
@@ -152,8 +152,9 @@ Predicted target name: ['setosa']
 
 
 
-##Evaluating the model
-###Code snippet 11
+==>Evaluating the model <br>
+
+->Code snippet 11
 ```python
 y_pred = knn.predict(X_test)
 print("Test set predictions: \n {}".format(y_pred))
@@ -164,8 +165,9 @@ Evaluation of the model on the basis of the prediction to calculate the accuracy
 
 
 
-##Checking the accuracy of the model
-###Code snippet 11
+==>Checking the accuracy of the model
+
+->Code snippet 12
 ```python
 print("Test set score: {}".format(np.mean(y_pred == y_test)))
 ```
