@@ -7,7 +7,7 @@ This program applies basic machine learning (classification) concept using KNN(k
 <img align="left" alt="VS Code" width="26px" src="vscode.png" />
 <img align="left" alt="Python" width="26px" src="python.png" />
 <img align="left" alt="colab" width="26px" height="34px" src="colab.png" />
-<img align="left" alt="numpy"  height="34px" src="numpy.png" />
+<img align="left" alt="numpy"   width="34px" height="44px" src="numpy.png" />
 <img align="left" alt="scikit learn"  height="34px" src="Scikit_learn.png" />
 <img align="left" alt="pandas"  height="34px" src="pandas.png" />
 <br>
